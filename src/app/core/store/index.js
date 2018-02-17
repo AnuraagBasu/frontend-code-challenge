@@ -4,7 +4,12 @@ import { createLogger } from 'redux-logger';
 
 import reducer from '../reducers';
 
-function getStore( initialState, isDevMode ) {
+function getStore( initialState ) {
+	let isDevMode = true;
+	if ( process.env.NODE_ENV == 'production' ) {
+		isDevMode = false;
+	}
+
 	const loggerMiddleware = createLogger( { predicate: ( getState, actions ) => isDevMode } );
 
 	const enhancer = compose(
@@ -18,7 +23,7 @@ function getStore( initialState, isDevMode ) {
 }
 
 const initialState = {
-
+	advertisements: []
 };
 
 export default getStore( initialState );

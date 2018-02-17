@@ -5,27 +5,31 @@ import { bindActionCreators } from 'redux';
 import { ActionCreators } from '../../core/actions';
 
 class Root extends Component {
-    constructor( props ) {
-        super( props );
-    }
+	constructor( props ) {
+		super( props );
+	}
 
-    render() {
-        return (
-            <div>
-                <span>React with Redux</span>
-            </div>
-        );
-    }
+	componentDidMount() {
+		this.props.getAdvertisements();
+	}
+
+	render() {
+		return (
+			<div>
+				<span>React with Redux</span>
+			</div>
+		);
+	}
 }
 
 function mapDispatchToProps( dispatch ) {
-    return bindActionCreators( ActionCreators, dispatch );
+	return bindActionCreators( ActionCreators, dispatch );
 }
 
 function mapStateToProps( state ) {
-    return {
-
-    }
+	return {
+		adverstisements: state.adverstisements
+	}
 }
 
 export default connect( mapStateToProps, mapDispatchToProps )( Root );

@@ -5,7 +5,10 @@ import { render } from 'react-dom';
 import store from '../core/store';
 import Root from './containers/Root';
 
-render( (
+const App = (
 	<Provider store={store}>
 		<Root />
-	</Provider> ), document.getElementById( 'app' ) );
+	</Provider>
+);
+
+render( App, document.getElementById( 'app' ) );
