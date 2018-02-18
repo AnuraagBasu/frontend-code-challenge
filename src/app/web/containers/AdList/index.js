@@ -30,7 +30,7 @@ export default class AdList extends Component {
 			}
 
 			let price = advertisement.advertisementPrice.sellPrice;
-			if ( !price ) {
+			if ( ( advertisement.purpose == 0 ) || !price ) {
 				price = advertisement.advertisementPrice.baseRent;
 			}
 
