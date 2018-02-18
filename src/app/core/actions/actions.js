@@ -7,7 +7,9 @@ export function getAdvertisements() {
 			.then( resp => resp.json() )
 			.then( resp => {
 				if ( resp && resp.data ) {
-					dispatch( setAdvertisements( resp.data.slice( 0, 10 ) ) );
+					let startingIndex = Math.floor( Math.random() * ( ( resp.data.length - 10 ) - 0 + 1 ) );
+					startingIndex = 0;
+					dispatch( setAdvertisements( resp.data.slice( startingIndex, startingIndex + 10 ) ) );
 				}
 			} )
 			.catch( err => {

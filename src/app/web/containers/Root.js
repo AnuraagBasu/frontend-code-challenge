@@ -4,6 +4,11 @@ import { bindActionCreators } from 'redux';
 
 import { ActionCreators } from '../../core/actions';
 
+import AdList from './AdList';
+import Adv from '../components/Advertisement';
+
+import BaseStyles from '../styles/base.scss';
+
 class Root extends Component {
 	constructor( props ) {
 		super( props );
@@ -14,11 +19,18 @@ class Root extends Component {
 	}
 
 	render() {
-		return (
-			<div>
-				<span>React with Redux</span>
-			</div>
-		);
+		let content;
+		if ( this.props.advertisements.length ) {
+			content = (
+				<AdList adsToShow={this.props.advertisements} />
+			);
+		} else {
+			content = (
+				<div>Loading Now...</div>
+			);
+		}
+
+		return content;
 	}
 }
 
@@ -27,8 +39,9 @@ function mapDispatchToProps( dispatch ) {
 }
 
 function mapStateToProps( state ) {
+	console.log( "state is, ", state );
 	return {
-		adverstisements: state.adverstisements
+		advertisements: state.advertisements
 	}
 }
 

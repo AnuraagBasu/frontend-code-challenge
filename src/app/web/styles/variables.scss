@@ -1,0 +1,5 @@
+$darkestTextColor: #292a3a;
+$darkerTextColor: lighten($darkestTextColor, 5%);
+$regularTextColor: lighten($darkestTextColor, 20%);
+$lighterTextColor: lighten($darkestTextColor, 40%);
+$lightestTextColor: lighten($darkestTextColor, 60%);
