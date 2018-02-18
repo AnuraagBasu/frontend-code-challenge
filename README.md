@@ -1,10 +1,3 @@
-# Front-End Interview Test
-
-This is a simple front-end code challenge created to serve two purposes:
-
-1. Show off your skills,
-1. Give us a better understanding of your skills.
-
 ## The Task
 
 The programming challenge exists in 2 parts:
@@ -17,33 +10,24 @@ The programming challenge exists in 2 parts:
 
 * Create a layout based on the given screen (fe_test_example_screen.png).
 * Style the layout consistently and beautifully, adhering as closely to the design as possible.
-* **NOTE:** You are free to use any preprocessor you wish, or write raw CSS. *Bonus points for an explanation of your choice.*
 
 ### PART B: Javascript
 
 * Consume our public API @ https://api.mcmakler.de/v1/advertisements to retrieve a list of advertisements of vacant apartments.
 * Display the first 10 advertisements in the HTML + CSS layout created in step A, sticking to the layout, placing data where it fits.
-* **NOTE:** You are free to use any framework you wish, or do it VanillaJS style. *Brief explanation of your choice.*
 
-## Additional Instructions
+## The Implementation
 
-* Fork this repository
-* After you're done, provide us the link to your repository.
-* Leave comments where you were not sure how to properly proceed.
-* Implementations without a README will be automatically rejected.
-* No pull requests
-* ES6 and above
+Libraries used:
+* React - for building the view layer
+* Redux - for state management
 
-## Bonus Points
+## Steps to Run
 
-* Tests
-* Clean code!
-* Knowledge of application flow.
-* Knowledge of modern best practices/coding patterns.
-* Demonstration of good state management.
-* Usage of frameworks/supersets.
-* Pixel perfection.
-* Componential thinking.
-* Usage of linters.
-* Git hooks.
-* Usage of Material Design concepts
+* Clone the project
+* run _**npm install**_
+* run _**npm run web-prod**_ - this will create the _**bundle.js**_ and also start up an express server on port 8000
+
+## Future Additions
+- [ ] create a detailed view for an advertisement
+- [ ] use the capability of the code framework and build a RN app sharing the business logic with the web-client
