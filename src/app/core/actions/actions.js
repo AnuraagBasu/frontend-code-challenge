@@ -13,7 +13,7 @@ export function getAdvertisements() {
 				}
 			} )
 			.catch( err => {
-				// handle error
+				// TODO: handle error
 				console.error( "error in fetching advertisements", JSON.stringify( err ) );
 			} );
 	};

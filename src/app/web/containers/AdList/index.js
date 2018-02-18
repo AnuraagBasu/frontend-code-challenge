@@ -23,7 +23,7 @@ export default class AdList extends Component {
 				image = titlePictures[ 0 ] && titlePictures[ 0 ].advertisementThumbnails.inventory_m.url;
 			}
 
-			let address = "-";
+			let address;
 			if ( advertisement.userWishes.visibleAddress ) {
 				let addrObj = advertisement.realestateSummary.address;
 				address = addrObj.postalCode + " " + addrObj.street + " / " + addrObj.city;

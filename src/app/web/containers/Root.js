@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import { ActionCreators } from '../../core/actions';
 
 import AdList from './AdList';
-import Adv from '../components/Advertisement';
 import Loader from '../components/Loader';
 
 import BaseStyles from '../styles/base.scss';
@@ -44,7 +43,6 @@ function mapDispatchToProps( dispatch ) {
 }
 
 function mapStateToProps( state ) {
-	console.log( "state is, ", state );
 	return {
 		advertisements: state.advertisements
 	}

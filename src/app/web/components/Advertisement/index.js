@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Styles from './styles.scss';
 
@@ -29,8 +30,18 @@ const Advertisement = props => {
 	);
 };
 
+Advertisement.propTypes = {
+	image: PropTypes.string,
+	title: PropTypes.string.isRequired,
+	address: PropTypes.string,
+	price: PropTypes.string.isRequired,
+	numberOfRooms: PropTypes.number.isRequired,
+	space: PropTypes.number.isRequired
+};
+
 Advertisement.defaultProps = {
-	image: "http://www.joepperezassociates.com/House.jpg"
-}
+	image: "http://www.joepperezassociates.com/House.jpg",
+	address: "N/A"
+};
 
 export default Advertisement;
