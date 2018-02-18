@@ -1,12 +1,10 @@
 @import "../../styles/mixins.scss";
-
 .ad-list-container {
-    max-width: 1024px;
-    margin: 0 auto;
-	text-align: center;
-	padding: 16px;
-
-	& > * {
-		@include animation('fadeIn .2s');
-	}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    &>* {
+        @include animation('fadeIn .2s');
+    }
 }

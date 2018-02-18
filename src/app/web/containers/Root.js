@@ -6,6 +6,7 @@ import { ActionCreators } from '../../core/actions';
 
 import AdList from './AdList';
 import Adv from '../components/Advertisement';
+import Loader from '../components/Loader';
 
 import BaseStyles from '../styles/base.scss';
 
@@ -26,11 +27,15 @@ class Root extends Component {
 			);
 		} else {
 			content = (
-				<div>Loading Now...</div>
+				<Loader />
 			);
 		}
 
-		return content;
+		return (
+			<div className="page-container">
+				{content}
+			</div>
+		);
 	}
 }
 
